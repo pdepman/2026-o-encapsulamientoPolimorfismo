@@ -1,0 +1,28 @@
+import example.*
+
+describe "Tom" {
+  test "velocidad inicial de tom es 5" {
+    assert.equals(5, tom.velocidad())
+  }
+  test "si cambia la energia de tom, cambia la velocidad" {
+    tom.energia(10)
+    assert.equals(6, tom.velocidad())
+  }
+  test "tom no puede atrapar a jerry inicialmente" {
+    assert.notThat(tom.puedeAtrapar(jerry))
+  }
+  test "si la velocidad de tom es mayor, puede atrapar a la jerry" {
+    jerry.peso(10)
+    assert.that(tom.puedeAtrapar(jerry))
+  }
+  test "tom inicial no puede atrapar al raton robot" {
+    assert.notThat(tom.puedeAtrapar(ratonRobot))
+  }
+}
+
+describe "Jerry" {
+  test "velocidad de jerry cambia, si cambia su peso" {
+    jerry.peso(7)
+    assert.equals(3, jerry.velocidad())
+  }
+}
