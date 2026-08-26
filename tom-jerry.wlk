@@ -34,10 +34,10 @@ object ratonRobot {
 ratonRobot y jerry IMPLEMENTAN la INTERFAZ criatura
 la interfaz criatura define que se tiene que implementar el metodo velocidad/0
 
-Por mas que implemente el metodo NO es polimorfico
 Una cpu NO es una criatura
 
 object cpu {
   method velocidad() = 5 // GHz
 } 
+Por mas que implemente el metodo NO es polimorfico
 */
